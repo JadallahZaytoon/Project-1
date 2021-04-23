@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -19,7 +20,8 @@
             <div id="inter-action">
 
                 <input id="player-name-input" type="text" placeholder="Name Here" style="margin-left: 90px; width: 230px; box-sizing: border-box; padding: 12px 20px; border: 2px solid black; border-radius: 10px;" >
-                <button style="background-color: burlywood; width: 150px; margin-left: 130px; margin-top: 30px;box-sizing: border-box; padding: 12px 20px; border: 2px solid black; border-radius: 10px; ">Lets Go</button>
+             <!-- <a href="play.html"  ><button onclick=location.href ='play.html' style="background-color: rgb(241, 186, 113); width: 150px; margin-left: 130px; margin-top: 30px;box-sizing: border-box; padding: 12px 20px; border: 2px solid black; border-radius: 10px; ">Lets Go</button></a> -->
+           <a href="play.html"><button onclick="getName()" style="background-color: rgb(241, 186, 113);width: 150px; margin-left: 130px; margin-top: 30px;border-radius: 10px; box-sizing: content-box; ">Play</button></a>
             </div>
 
 
@@ -29,6 +31,12 @@
 
 
     </div>
+
+    <script src="main.js" >
+        // var pname= document.getElementById("player-name-input").vale;
+        // sessionStorage.setItem("PlayerName",pname);
+        // console.log(pname);
+    </script>
     
 </body>
 </html>

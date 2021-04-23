@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 #parent {
   display: flex;
   justify-content: center;
@@ -23,5 +28,33 @@
   margin-bottom: 100px;
 }
 
-input {
+#container_Div {
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+
+}
+
+.child {
+  display: grid;
+  
+  gap: 70px;
+  padding-bottom: 90px;
+  padding-top: 70px ;
+  background-color: rgba(0, 41, 138, 0.787);
+  border: 2px solid rgb(197, 89, 0);
+  font: 1.3em sans-serif;
+  font-weight: bold;
+  height: 100%;
+}
+
+.child_2{
+
+  background-color: rgba(0, 138, 67, 0.787);
+  border: 2px solid rgb(197, 89, 0);
+  font: 1.3em sans-serif;
+  font-weight: bold;
+  height: 100%;
+
 }
