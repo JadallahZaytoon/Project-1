@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -29,19 +29,17 @@
 }
 
 #container_Div {
-
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh;
-
 }
 
 .child {
   display: grid;
-  
-  gap: 70px;
+  justify-content: space-between;
+  gap: 30px;
   padding-bottom: 90px;
-  padding-top: 70px ;
+  padding-top: 70px;
   background-color: rgba(0, 41, 138, 0.787);
   border: 2px solid rgb(197, 89, 0);
   font: 1.3em sans-serif;
@@ -49,12 +47,55 @@
   height: 100%;
 }
 
-.child_2{
-
-  background-color: rgba(0, 138, 67, 0.787);
+.child_2 {
+  background-color: rgba(223, 12, 12, 0.787);
   border: 2px solid rgb(197, 89, 0);
   font: 1.3em sans-serif;
   font-weight: bold;
   height: 100%;
+}
+.child_3 {
+  background-color: rgba(118, 2, 87, 0.787);
+  border: 2px solid rgb(197, 89, 0);
+  font: 1.3em sans-serif;
+  font-weight: bold;
+}
 
+.child_4 {
+  background-color: rgba(118, 2, 87, 0.787);
+  border: 2px solid rgb(197, 89, 0);
+  font: 1.3em sans-serif;
+  font-weight: bold;
+}
+#middel_div {
+  justify-content: stretch;
+}
+
+#gameName {
+  top: 0px;
+  width: 380px;
+  height: 40px;
+  padding-top: 0;
+  margin-top: 1px;
+}
+
+#play_screen {
+  justify-self: stretch;
+  margin-top: 70px;
+  height: 400px;
+}
+
+#middel_footer {
+  width: 380px;
+  bottom: 0;
+  height: 80px;
+}
+
+#playe_name {
+  padding-top: 0;
+  width: 40px;
+  justify-self: stretch;
+  height: 40px;
+  border: black;
+  border-style: groove;
 }

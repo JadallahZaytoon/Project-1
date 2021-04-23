@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <label id="name" for=""></label>
-    
+
     <!-- <h1></h1> -->
     <div id="container_Div">
-   <div id="first" class="child">
-
-        <div id="timer" class="child_2" style="width: 160px; margin-left: 15px; height: 200px;">
-        
+      <div id="first" class="child">
+        <div
+          id="timer"
+          class="child_2"
+          style="width: 160px; margin-left: 15px; height: 200px"
+        >
+          <h2>timer</h2>
         </div>
-        <div id="PlayerName" class="child_2" style="width: 150px; margin-left: 20px; height: 150px;"></div>
+        <div
+          id="level"
+          class="child_2"
+          style="width: 150px; margin-left: 20px; height: 150px"
+        >
+          <h2>level</h2>
+        </div>
 
+        <button style="font-size: 40px" onclick="setcounter()">start</button>
+      </div>
+
+      <div id="middel_div" class="child">
+        <div id="gameName" class="child_3">gameName</div>
+
+        <div id="play_screen" class="child_3">play_screen</div>
+
+        <div id="middel_footer" class="child_3">middel_footer</div>
+      </div>
+
+      <div id="last" class="child">
+        <div id="plyer_name" class="child_4"></div>
+        <div id="instructions" class="child_4"></div>
+        <div id="restart" class="child_4"></div>
+      </div>
     </div>
 
-    <div id="middel_div" class="child">
+    <script src="play.js">
 
-    <div id="o"></div>
-    <div id="level"></div>
-    <div id="game_display"></div>
-    <div id="instruction"></div> 
+      // var PlayerName=sessionStorage.getItem("PlayerName");
 
-
-
-    </div>
-
-    <div id="last" class="child"></div>
-            
-</div>
-
-
-    <script src="play.js" >
-
-    // var PlayerName=sessionStorage.getItem("PlayerName");
-        
-    //     const headerr=document.querySelector("h1")
-    //     headerr.id="myH1";
-    //     headerr.innerText=PlayerName;
-
+      //     const headerr=document.querySelector("h1")
+      //     headerr.id="myH1";
+      //     headerr.innerText=PlayerName;
     </script>
-    
-</body>
+  </body>
 </html>
