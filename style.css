@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-#parent {
+/* #parent {
   display: flex;
   justify-content: center;
 }
@@ -14,9 +14,60 @@
   min-height: 400px;
   width: 400px;
   margin-top: 150px;
+} */
+
+body {
+  height: 100vh;
+  background-color: indigo;
+  display: flex;
 }
 
-#header {
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid coral;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width:calc( 25% - 10px) ;
+  height: calc(33.333% - 10px) ;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform.5s;
+  
+}
+
+.memory-card:active{
+
+  transform: scale(.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip{
+  transform: rotateY(180deg);
+}
+
+
+.front-face,.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  border: 2px solid deeppink;
+  backface-visibility: hidden;
+}
+.front-face{
+  transform: rotateY(180deg);
+}
+
+/* #header {
   border-color: black;
   border-style: groove;
   min-height: 50px;
@@ -80,8 +131,11 @@
 }
 
 #play_screen {
-  justify-self: stretch;
-  margin-top: 70px;
+  display: grid;
+ border-style: groove;
+ border-color: crimson;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20%;
   height: 400px;
 }
 
@@ -99,3 +153,13 @@
   border: black;
   border-style: groove;
 }
+
+.playScreenChild{
+
+  border: chartreuse;
+  border-style: groove;
+  border-width: 2px;
+  
+  
+
+} */
