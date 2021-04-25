@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home-page">
+      <div class="log-in">
+        <div class="header"><p> Real Madrid <br />Card Game</p></div>
 
-    <!-- <div id="parent">
+        <div class="log-body">
+          <div class="user-name">
+            <input
+              id="player-name"
+              type="text"
+              placeholder="Enter your name"
+              class="inpt"
+            />
+          </div>
 
-        <div id="box-holder">
+          <div class="buton"></div>
 
-            
-
-            <div id="header"><h1>Card Memorize Game</h1></hi></div>
-            <div id="inter-action">
-
-                <input id="player-name-input" type="text" placeholder="Name Here" style="margin-left: 90px; width: 230px; box-sizing: border-box; padding: 12px 20px; border: 2px solid black; border-radius: 10px;" >
-             <!-- <a href="play.html"  ><button onclick=location.href ='play.html' style="background-color: rgb(241, 186, 113); width: 150px; margin-left: 130px; margin-top: 30px;box-sizing: border-box; padding: 12px 20px; border: 2px solid black; border-radius: 10px; ">Lets Go</button></a> -->
-           <a href="play.html"><button onclick="getName()" style="background-color: rgb(241, 186, 113);width: 150px; margin-left: 130px; margin-top: 30px;border-radius: 10px; box-sizing: content-box; ">Play</button></a>
-            </div>
-
-
-
+          <a href="play.html">
+            <button class="btn" onclick="getName()">Lets Go</button></a
+          >
         </div>
-        
+      </div>
+    </div>
 
-
-    </div> -->
-
-    <script src="main.js" >
-        // var pname= document.getElementById("player-name-input").vale;
-        // sessionStorage.setItem("PlayerName",pname);
-        // console.log(pname);
+    <script src="main.js">
+      var pname= document.getElementById("player-name").vale;
+      sessionStorage.setItem("Player-name",pname);
+      console.log(pname);
     </script>
-    
-</body>
+  </body>
 </html>

@@ -1,102 +1,80 @@
-// var userN = sessionStorage.getItem("user");
-// const playerDisplay = document.getElementById("plyer_name");
-// playerDisplay.append(userN);
-// // h11.id="heas"
-// // h11.innerText=userN;
-// // const myPageBody=document.querySelector("body")
-// // myPageBody.append(h11)
-
-// let counter = document.getElementById("timer");
-// let count1 = 1;
-
-// setcounter = () => {
-//   //selctor for start btn and disable
-// //  document.getElementById("btnStart").disabled=ture;
-  
-//  let x= setInterval(() => {
-//     counter.innerText = count1;
-    
-
-//     if(count1===5){
-
-//       clearInterval(x);
-
-//     // const timesUp = document.getSelection("timer");
-//     // timesUp.append="Time's Up";
-    
-      
-    
-//     }
-    
-//     count1++;
-//   }, 1000);
-// };
-
-const cards=document.querySelectorAll(`.memory-card`);
-
-let hasFlippedCard=false;
-let lockBoard=false;
-let firstCard,secondCard;
+//Timer function
+function myFunction() {
+  let i =10021
+  let timer=setInterval(function(){
+  document.querySelector("label").innerText=i;
+  i--;
+  if(i==0 ){
+  clearInterval(timer)
+  window.location.replace("homePage.html");
+  }
+  }
+  , 1000);
+  }
+  myFunction()
 
 
 
 
-function flipCard(){
+const cards = document.querySelectorAll(`.memory-card`);
 
-  if(lockBoard) return;
-  if(this===firstCard)return;
-  this.classList.toggle(`flip`)
-  if(!hasFlippedCard){
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 
-    hasFlippedCard=true;
-    firstCard=this;
-    
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+  this.classList.toggle(`flip`);
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+
     return;
   }
 
-    hasFlippedCard=false;
-    secondCard=this;
+  hasFlippedCard = false;
+  secondCard = this;
 
-    checkForMatch();
-     
-  
+  checkForMatch();
 }
 
-checkForMatch=()=>{
+checkForMatch = () => {
+  if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    disableCards();
+  } else {
+    unFlippedCards();
+  }
+};
 
-  if(firstCard.dataset.framework===
-    secondCard.dataset.framework){
+disableCards = () => {
+  firstCard.removeEventListener(`click`, flipCard);
+  secondCard.removeEventListener(`click`, flipCard);
 
-      disableCards();
-      
-    }else{
-     
-      unFlippedCards();
-    }
+  resetBoard;
+};
 
-}
+unFlippedCards = () => {
+  lockBoard = true;
 
-disableCards=()=>{
+  setTimeout(() => {
+    firstCard.classList.remove(`flip`);
+    secondCard.classList.remove(`flip`);
 
-  firstCard.removeEventListener(`click`,flipCard);
-  secondCard.removeEventListener(`click`,flipCard);
+    lockBoard = false;
+  }, 1000);
+};
+resetBoard = () => {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+};
 
-    resetBoard;
+(shuffle = () => {
+  cards.forEach((card) => {
+    let randomPosition = Math.floor(Math.random() * 12);
+    card.style.order = randomPosition;
+  });
+})();
 
-}
-
-unFlippedCards=()=>{
-  lockBoard=true;
-
-  setTimeout(()=>{
-    firstCard.classList.remove(`flip`)
-  secondCard.classList.remove(`flip`)
-
-  lockBoard=false;
-  },1000)
-}
-resetBoard=()=>{
-  [hasFlippedCard,lockBoard]=[false,false];
-  [firstCard,secondCard]=[null,null]
-}
-cards.forEach(card=>card.addEventListener(`click`,flipCard));
+my = () => {};
+cards.forEach((card) => card.addEventListener(`click`, flipCard));
