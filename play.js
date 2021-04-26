@@ -1,12 +1,12 @@
 //Timer function
 function myFunction() {
-  let i =10021
+  let i =60
   let timer=setInterval(function(){
   document.querySelector("label").innerText=i;
   i--;
   if(i==0 ){
   clearInterval(timer)
-  window.location.replace("homePage.html");
+  window.location.replace("lose.html");
   }
   }
   , 1000);
